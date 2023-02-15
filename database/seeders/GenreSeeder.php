@@ -14,6 +14,6 @@ class GenreSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Genre :: factory() -> count(20) -> create();
     }
 }
