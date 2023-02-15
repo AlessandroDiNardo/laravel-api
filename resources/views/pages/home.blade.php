@@ -16,11 +16,11 @@ fil
     </a>
 
     @foreach ($genres as $genre)
-    <div class="card text-center p-5 bg-dark border border-0 ">
-
-        <h2 class="text-white">Genre: {{ $genre -> name }}</h2>
-
-        <div class="card-body d-flex flex-wrap justify-content-start gap-5  border border-1">
+    <div class="card text-center p-5 bg-dark border border-1 border-denger mt-5">
+        <div class="d-flex justify-content-center mb-5">
+            <h2 class="text-white bg-danger p-3 rounded-5" style="width: 50%;">Genre: {{ $genre -> name }}</h2>
+        </div>
+        <div class="card-body d-flex flex-wrap justify-content-start gap-5">
 
             @foreach ($genre -> movies as $movie)
                 <div class="card border border-4 border-danger">
