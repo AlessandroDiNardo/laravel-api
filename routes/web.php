@@ -8,3 +8,6 @@ use App\Http\Controllers\MainController;
 Route::get('/', [MainController::class, 'home'])
     ->name('home');
 
+// show
+Route::get('/movies', [MainController::class, 'movies'])
+->name('movies');

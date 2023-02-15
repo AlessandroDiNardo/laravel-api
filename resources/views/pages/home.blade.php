@@ -3,6 +3,11 @@
 @section('content')
     <h1 class="text-danger">Movie Categories</h1>
 
+    <a href="{{ route('movies') }}" class="btn btn-danger">
+        <i class="fa-solid fa-rectangle-list"></i>
+        All Movie
+    </a>
+    
     @foreach ($genres as $genre)
     <div class="card text-center p-5 bg-dark border border-0 ">
 
@@ -20,11 +25,13 @@
                         </p>
                         <span>
                             <strong>Release Date:</strong> 
-                            {{ $movie -> release_date }}</span>
+                            {{ $movie -> release_date }}
+                        </span>
                         <br>
                         <span>
                             <strong>Cash Out: </strong>
-                            {{ $movie -> cash_out }}$</span>
+                            {{ $movie -> cash_out }}$
+                        </span>
                     </div>
                 </div>   
             @endforeach

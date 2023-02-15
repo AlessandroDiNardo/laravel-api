@@ -17,4 +17,8 @@ class MainController extends Controller
         return view('pages.home', compact('genres'));
     }
 
+    public function movies() {
+        $movies = Movie :: all();
+        return view('pages.movies', compact('movies'));
+    }
 }
