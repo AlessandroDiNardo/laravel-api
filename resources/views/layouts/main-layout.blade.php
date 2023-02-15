@@ -12,8 +12,10 @@
 </head>
 <body>
     
-    @include('components.header')
-    @yield('content')    
+   <div class="container-fluid bg-dark">
+        @include('components.header')
+        @yield('content')   
+   </div> 
 
 </body>
 </html>
