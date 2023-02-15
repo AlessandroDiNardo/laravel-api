@@ -10,7 +10,7 @@
 
     <title>Laravel Movie Api</title>
 </head>
-<body>
+<body class="bg-dark">
     
    <div class="container-fluid bg-dark">
         @include('components.header')
