@@ -17,7 +17,8 @@ class TagFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => fake() -> unique() -> words(2, true),
+            'description' => fake() -> boolean() ? fake() -> text(100) : null,
         ];
     }
 }
