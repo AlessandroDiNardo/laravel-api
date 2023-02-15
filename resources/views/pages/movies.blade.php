@@ -17,6 +17,13 @@
                         <span>Release Date: {{ $movie -> release_date }}</span>
                         <br>
                         <span>Cash Out: {{ $movie -> cash_out }}</span>
+
+                        <!-- link per eliminare il prodotto  -->
+                        <div class="mt-3">
+                            <a href="{{route('delete.movie', $movie)}}" class="btn btn-danger mt-5">
+                                <i class="fa-solid fa-trash">DELETE</i>
+                            </a>
+                        </div>
                     </div>
                 </div>   
             @endforeach
