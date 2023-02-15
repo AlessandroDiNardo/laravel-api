@@ -18,10 +18,13 @@
                         <br>
                         <span>Cash Out: {{ $movie -> cash_out }}</span>
 
-                        <!-- link per eliminare il prodotto  -->
-                        <div class="mt-3">
-                            <a href="{{route('delete.movie', $movie)}}" class="btn btn-danger mt-5">
+                        <!-- link per eliminare il prodotto o modificarlo -->
+                        <div class="mt-5">
+                            <a href="{{route('delete.movie', $movie)}}" class="btn btn-danger">
                                 <i class="fa-solid fa-trash">DELETE</i>
+                            </a>
+                            <a href="{{route('edit.movie', $movie)}}" class="btn btn-danger">
+                                <i class="fa-solid fa-pen-to-square">EDIT</i>
                             </a>
                         </div>
                     </div>

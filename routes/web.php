@@ -21,3 +21,9 @@ Route::get('/create/movie', [MainController::class, 'create'])
 ->name('create.movie');
 Route::post('/store/movie', [MainController::class, 'store'])
 ->name('store.movie');
+
+// edit
+Route::get('/edit/movie/{movie}', [MainController::class, 'edit'])
+    ->name('edit.movie');
+Route::post('/update/movie/{movie}', [MainController::class, 'update'])
+    ->name('update.movie');
