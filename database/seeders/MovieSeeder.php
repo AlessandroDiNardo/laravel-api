@@ -5,6 +5,12 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
+// richiamo i model che servono per la creazione del movie
+use App\Models\Tag;
+use App\Models\Genre;
+use App\Models\Movie;
+
+
 class MovieSeeder extends Seeder
 {
     /**
