@@ -31,4 +31,4 @@ Route::post('/update/movie/{movie}', [MainController::class, 'update'])
 
 use App\Http\Controllers\ApiController;
 
-Route :: get('/api/v1/test', [ApiController :: class, 'test']);
+Route :: get('/api/v1/movieAll', [ApiController :: class, 'movieAll']);
