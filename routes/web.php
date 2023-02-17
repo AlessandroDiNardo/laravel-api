@@ -27,3 +27,8 @@ Route::get('/edit/movie/{movie}', [MainController::class, 'edit'])
     ->name('edit.movie');
 Route::post('/update/movie/{movie}', [MainController::class, 'update'])
     ->name('update.movie');
+
+
+use App\Http\Controllers\ApiController;
+
+Route :: get('/api/v1/test', [ApiController :: class, 'test']);
