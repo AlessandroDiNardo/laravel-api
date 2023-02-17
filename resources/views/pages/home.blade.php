@@ -1,5 +1,5 @@
 @extends('layouts.main-layout')
-fil
+ 
 @section('content')
     <h1 class="text-danger">Movie Categories</h1>
 
