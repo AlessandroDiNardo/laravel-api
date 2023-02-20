@@ -6,7 +6,7 @@ export default {
 
   mounted() {
 
-    Axios.get('http://localhost:8000/api/v1/movieAll')
+    Axios.get('http://localhost:8000/api/v1/movie/all')
       .then(res => {
 
         const data = res.data;
