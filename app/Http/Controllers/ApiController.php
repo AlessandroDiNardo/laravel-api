@@ -15,7 +15,7 @@ class ApiController extends Controller
          
         return response() -> json([
 
-            'succes' => true,
+            'success' => true,
             'response' => $movies
         ]);
     }
