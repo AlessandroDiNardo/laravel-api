@@ -9,7 +9,7 @@ use App\Models\Movie;
 class ApiController extends Controller
 {
 
-    public function movieAll() {
+    public function movieWtagWgenreAll() {
 
         $movies = Movie :: all();
          
