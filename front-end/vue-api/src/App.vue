@@ -1,30 +1,76 @@
 <script>
 
-import Axios from 'axios';
+import axios from 'axios';
 
-export default {
+const api_url = 'http://localhost:8000/api/v1/';
+const empty_new_movie = {
 
-  mounted() {
-
-    Axios.get('http://localhost:8000/api/v1/movie/all')
-      .then(res => {
-
-        const data = res.data;
-        const success = data.success;
-        const movies = data.response;
-
-        console.log(movies);
-      })
-      .catch(err => console.error(err));
-  }
+  tags_id: []
 }
 
+export default {
+  name: 'App',
+  data() {
+    return {
+      movies: [],
+      tags: [],
+      genres: [],
+      new_movie: { ...empty_new_movie },
+    }
+  },
+
+  methods: {
+    printMovie() {
+      axios.get(api_url + 'movie/all')
+        .then(res => {
+          const data = res.data;
+          const success = data.success;
+          const response = data.response;
+          const movies = response.movies;
+          const genres = response.genres;
+          const tags = response.tags;
+
+          if (success) {
+            this.movies = movies;
+            this.genres = genres;
+            this.tags = tags;
+          }
+        })
+
+        .catch(err => console.log);
+    },
+
+    mounted() {
+
+      this.printMovie();
+    }
+  }
+}
 </script>
 
 <template>
-  <div>
-    <h1>Hello World!</h1>
+  <div class="container">
+    <h1>My Movie List</h1>
+
+    <ul>
+      <!-- film -->
+      <li v-for="movie in movies" :key="movie.id">
+        {{ movie.name }} - {{ movie.release_date }}
+        <!-- lista dei tag del film -->
+        <ul>
+          <li v-for="tag in movie.tags" :key="tag.id">
+            {{ tag.name }}
+          </li>
+        </ul>
+        <hr>
+      </li>
+    </ul>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.container {
+
+  text-align: center;
+}
+</style>
